@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RottenVehicle;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CleanVehicle;
 
-namespace Game
+namespace VehicleRefactorTest
 {
-    class Program
+    [TestClass]
+    public class CleanVehicleTest
     {
-        static void Main(string[] args)
+        [TestMethod]
+        public void TestOriginalState()
         {
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
             Vehicle vehicle;
             int[] result;
 
@@ -67,7 +65,9 @@ namespace Game
             airplaneResult += result[0].ToString();
             airplaneResult += result[1].ToString();
 
-            Console.WriteLine($"A repülőgép tesztek eredménye: {airplaneResult}");
+            string expectedAirplane = "04500-7-500-20-20-20-2033000-30";
+
+            Assert.AreEqual(expectedAirplane, airplaneResult);
 
             //Holdjáró teszt
             vehicle = new Vehicle("rover");
@@ -121,7 +121,9 @@ namespace Game
             roverResult += result[0].ToString();
             roverResult += result[1].ToString();
 
-            Console.WriteLine($"A holdjáró tesztek eredménye: {roverResult}");
+            string expectedRover = "0-100-100-100-100-20-20-20-2002000-20";
+
+            Assert.AreEqual(expectedRover, roverResult);
 
             //Tengeralattjáró teszt
             vehicle = new Vehicle("submarine");
@@ -175,9 +177,9 @@ namespace Game
             submarineResult += result[0].ToString();
             submarineResult += result[1].ToString();
 
-            Console.WriteLine($"A tengeralattjáró tesztek eredménye: {submarineResult}");
+            string expectedSubmarine = "0-100-100-100-1001200-2-2000000000";
 
-            Console.ReadKey();
+            Assert.AreEqual(expectedSubmarine, submarineResult);
         }
     }
 }
