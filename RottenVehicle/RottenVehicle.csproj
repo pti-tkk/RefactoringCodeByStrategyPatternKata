@@ -44,11 +44,5 @@
     <Compile Include="Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PlayerComponent\PlayerComponent.csproj">
-      <Project>{6AD8D13D-FA22-4AB2-9076-0584BC0DD91F}</Project>
-      <Name>PlayerComponent</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
