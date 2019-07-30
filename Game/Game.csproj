@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PlayerComponent\PlayerComponent.csproj">
-      <Project>{6ad8d13d-fa22-4ab2-9076-0584bc0dd91f}</Project>
-      <Name>PlayerComponent</Name>
+    <ProjectReference Include="..\RottenVehicle\RottenVehicle.csproj">
+      <Project>{626b0cb0-af1b-4465-b95d-db9b64253a49}</Project>
+      <Name>RottenVehicle</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

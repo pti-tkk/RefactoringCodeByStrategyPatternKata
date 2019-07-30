@@ -1,5 +1,4 @@
-﻿using PlayerComponent.Domain;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,126 +8,316 @@ namespace RottenVehicle
 {
     public class Vehicle
     {
-        public string type;
-        public Player player;
+        private string type;
+        public string Type
+        {
+            get { return type; }
+            set { type = value; }
+        }
 
         public Vehicle(string type)
         {
             this.type = type;
-            player = new Player();
         }
 
+        /// <summary>
+        /// A függvény egy x, y egész párost ad vissza tömb formájában.
+        /// A számok az egy frame alatti sebesség változását jelképezik.
+        /// A Vehicle pozíciója minden frame alatt annyit módosul, amennyit a tárolt x és y érték megad.
+        /// A Move függvény által visszaadott értékek, a Vehicle x és y értékét módosítja.
+        /// A függvény nem foglalkozik a maximális és minimális sebességgel, az ütközésekkel és a határokkal, 
+        /// a feladata mindössze annyi, hogy megadja, hogy egy adott típusú jármű egy adott közegben 
+        /// mennyivel képes módosítani a koordinátáit egy adott irányba.
+        /// </summary>
+        /// <param name="direction"></param>
+        /// <param name="environment"></param>
+        /// <returns>int[x, y]</returns>
         public int[] Move(string direction, string environment)
         {
+            int[] adjustCoordinates = new int[2];
             int x = 0;
             int y = 0;
 
+            //A levegőben minden jármű zuhan, kivéve a repülőgépet.
+            //A repülőgép két dimenzióban képes mozogni.
             if (environment == "atmosphere")
             {
-                if (this.type == "ship")
+                if (direction == "up")
                 {
-                    y = -10;
-                }
-                else if (this.type == "submarine")
-                {
-                    y = -10;
-                }
-                else if (this.type == "rover")
-                {
-                    y = -10;
-                }
-                else if (this.type == "airplane")
-                {
-                    if (direction == "up")
+                    if (this.type == "ship")
+                    {
+                        y = -10;
+                    }
+                    else if (this.type == "submarine")
+                    {
+                        y = -10;
+                    }
+                    else if (this.type == "rover")
+                    {
+                        y = -10;
+                    }
+                    else if (this.type == "airplane")
+                    {
                         y = 4;
-                    else if (direction == "down")
-                        y = -7;
-                    if (direction == "left")
-                        x = -5;
-                    else if (direction == "right")
-                        x = 5;
+                    }
                 }
+                else if (direction == "right")
+                {
+                    if (this.type == "ship")
+                    {
+                        y = -10;
+                    }
+                    else if (this.type == "submarine")
+                    {
+                        y = -10;
+                    }
+                    else if (this.type == "rover")
+                    {
+                        y = -10;
+                    }
+                    else if (this.type == "airplane")
+                    {
+                        x = 5;
+                    }
+
+                }
+                else if (direction == "down")
+                {
+                    if (this.type == "ship")
+                    {
+                        y = -10;
+                    }
+                    else if (this.type == "submarine")
+                    {
+                        y = -10;
+                    }
+                    else if (this.type == "rover")
+                    {
+                        y = -10;
+                    }
+                    else if (this.type == "airplane")
+                    {
+                        y = -7;
+                    }
+
+                }
+                else if (direction == "left")
+                {
+                    if (this.type == "ship")
+                    {
+                        y = -10;
+                    }
+                    else if (this.type == "submarine")
+                    {
+                        y = -10;
+                    }
+                    else if (this.type == "rover")
+                    {
+                        y = -10;
+                    }
+                    else if (this.type == "airplane")
+                    {
+                        x = -5;
+                    }
+
+                }
+
             }
+            //A víz alatt minden jármű süllyed, kivéve a tengeralattjárót.
+            //A tengeralattjáró két dimenzióban képes mozogni.
             else if (environment == "underwater")
             {
-                if (this.type == "ship")
+                if (direction == "up")
                 {
-                    y = -2;
-                }
-                else if (this.type == "submarine")
-                {
-                    if (direction == "up")
-                        y = 1;
-                    else if (direction == "down")
+                    if (this.type == "ship")
+                    {
                         y = -2;
-                    if (direction == "left")
-                        x = -2;
-                    else if (direction == "right")
+                    }
+                    else if (this.type == "rover")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "airplane")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "submarine")
+                    {
+                        y = 1;
+                    }
+                }
+                else if (direction == "right")
+                {
+                    if (this.type == "ship")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "rover")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "airplane")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "submarine")
+                    {
                         x = 2;
+                    }
                 }
-                else if (this.type == "rover")
+                else if (direction == "down")
                 {
-                    y = -2;
+                    if (this.type == "ship")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "rover")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "airplane")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "submarine")
+                    {
+                        y = -2;
+                    }
+
                 }
-                else if (this.type == "airplane")
+                else if (direction == "left")
                 {
-                    y = -2;
+                    if (this.type == "ship")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "rover")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "airplane")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "submarine")
+                    {
+                        x = -2;
+                    }
+
                 }
             }
+            //A vízen a holdjáró és a repülő süllyed.
+            //A hajó egy dimenzióban (x tengely) képes mozogni
+            //A tengeralattjáró 2 dimenzióban, de az y tengelyen csak lefelé
             else if (environment == "water")
             {
-                if (this.type == "ship")
+                if (direction == "up")
                 {
-                    if (direction == "left")
-                        x = -3;
-                    else if (direction == "right")
-                        x = 3;
-                }
-                else if (this.type == "submarine")
-                {
-                    if (direction == "down")
+                    if (this.type == "rover")
+                    {
                         y = -2;
-                    if (direction == "left")
-                        x = -2;
-                    else if (direction == "right")
-                        x = 2;
+                    }
+                    else if (this.type == "airplane")
+                    {
+                        y = -2;
+                    }
                 }
-                else if (this.type == "rover")
+                else if (direction == "right")
                 {
-                    y = -2;
-                }
-                else if (this.type == "airplane")
-                {
-                    y = -2;
-                }
-            }
-            else if (environment == "terrain")
-            {
-                if (this.type == "ship")
-                {
-                }
-                else if (this.type == "submarine")
-                {
-                }
-                else if (this.type == "rover")
-                {
-                    if (direction == "left")
-                        x = -2;
-                    else if (direction == "right")
-                        x = 2;
-                }
-                else if (this.type == "airplane")
-                {
-                    if (direction == "up")
-                        y = 3;
-                    if (direction == "left")
-                        x = -3;
-                    else if (direction == "right")
+                    if (this.type == "rover")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "airplane")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "ship")
+                    {
                         x = 3;
+                    }
+                    else if (this.type == "submarine")
+                    {
+                        x = 2;
+                    }
                 }
+                else if (direction == "down")
+                {
+                    if (this.type == "rover")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "airplane")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "submarine")
+                    {
+                        y = -2;
+                    }
+                }
+                else if (direction == "left")
+                {
+                    if (this.type == "rover")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "airplane")
+                    {
+                        y = -2;
+                    }
+                    else if (this.type == "ship")
+                    {
+                        x = -3;
+                    }
+                    else if (this.type == "submarine")
+                    {
+                        x = -2;
+                    }
+                }
+
+            }
+            //A szárazföldön csak a repülő és a holdjáró képes mozogni.
+            //A holdjáró egy dimenzióban (x tengely) mozog, a játék motorja automatikusan igazítja az y értéket a talajszinthez.
+            //A repülő két dimenzióban mozog, de az y tengelyen csak fölfelé.
+            else if (environment == "surface")
+            {
+                if (direction == "up")
+                {
+                    if (this.type == "airplane")
+                    {
+                        y = 3;
+                    }
+                }
+                else if (direction == "right")
+                {
+                    if (this.type == "rover")
+                    {
+                        x = 2;
+                    }
+                    else if (this.type == "airplane")
+                    {
+                        x = 3;
+                    }
+
+                }
+                else if (direction == "left")
+                {
+                    if (this.type == "rover")
+                    {
+                        x = -2;
+                    }
+                    else if (this.type == "airplane")
+                    {
+                        x = -3;
+                    }
+                }
+
             }
 
-            return new int[] { x, y };
+            adjustCoordinates[0] = x;
+            adjustCoordinates[1] = y;
+            return adjustCoordinates;
         }
     }
 }
