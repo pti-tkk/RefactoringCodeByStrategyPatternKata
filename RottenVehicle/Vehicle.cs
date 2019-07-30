@@ -5,32 +5,45 @@ using System.Text;
 using System.Threading.Tasks;
 
 /// <summary>
-/// A GigaGames játékfejlesztő cég nagysikerű játéka a Rover Over. A játék első verziójában egy holdjárót lehetett vezérelni különböző akadályokon keresztül.
-/// A játék nagy sikereket aratott, és a következő verziókba újabb járművek (repülő, hajó, tengeralattjáró) és közegek (levegő, vízfelszín és víz alatt) kerültek be.
-/// A vezető fejlesztő, Spageth Tibor zseniális módon látja át a saját kódját, ezért nem bajlódott a különböző fejlesztési módszerek, alapelvek vagy tervezési minták használatával.
-/// Meggyőződése, hogy aki nem tud eligazodni többszáz sornyi elágazásokkal tarkított forráskódon, az ne álljon fejlesztőnek.
+/// A GigaGames játékfejlesztő cég nagysikerű játéka a Rover Over. A játék első verziójában egy holdjárót 
+/// lehetett vezérelni különböző akadályokon keresztül. A játék nagy sikereket aratott, és a következő 
+/// verziókba újabb járművek (repülő, hajó, tengeralattjáró) és közegek (levegő, vízfelszín és víz alatt) 
+/// kerültek be.
 /// 
-/// Hősünk, Valy Dávid a GigaGames frissen felvett fejlesztője. A játék legújabb verziójának fejlesztéséhez csatlakozott, miközben a vezető fejlesztő rendes nyári szabadságát tölti.
-/// Ezért egyedül kell eligazodnia a kódrengetegben. Lássuk milyen teendői vannak Dávidnak!
+/// A vezető fejlesztő, Spageth Tibor zseniális módon látja át a saját kódját, ezért nem bajlódott a különböző
+/// fejlesztési módszerek, alapelvek vagy tervezési minták használatával. Meggyőződése, hogy aki nem tud 
+/// eligazodni többszáz sornyi elágazásokkal tarkított forráskódon, az ne álljon fejlesztőnek.
+/// 
+/// Hősünk, Valy Dávid a GigaGames frissen felvett fejlesztője. A játék legújabb verziójának fejlesztéséhez 
+/// csatlakozott, miközben a vezető fejlesztő rendes nyári szabadságát tölti. Ezért egyedül kell eligazodnia 
+/// a kódrengetegben. Lássuk milyen teendői vannak Dávidnak!
 ///
 /// Feladatok:
 /// 
-/// 1.: Hozz létre egy aktuális sebesség property-t, [0, 0] kiinduló értékkel, és minden Move() hívás után módosítsd megfelelően.
-///     Ez fogja megadni a jármű aktuális irányát és sebességét.
+/// 1.: Hozz létre egy aktuális sebesség property-t, [0, 0] kiinduló értékkel, és minden Move() hívás után 
+/// módosítsd megfelelően. Ez fogja megadni a jármű aktuális irányát és sebességét.
 /// 
-/// 2.: Kevés a négy irány. A string bemenetet cseréld le int-re! Az érték egy 0 és 7 közötti szám lehet, ahol a 0 a fölfelé a 7 pedig a balra.
-///     Az irányoknak megfelelően módosítsd a visszatérési értékeket!
+/// 2.: Kevés a négy irány. A string bemenetet cseréld le int-re! Az érték egy 0 és 7 közötti szám lehet, 
+/// ahol a 0 a fölfelé a 7 pedig a balra. Az irányoknak megfelelően módosítsd a visszatérési értékeket!
 /// 
-/// 3.: A játék újabb verziója kerül kiadásra. Ebben már a játékosok extrákkal is képesesek felszerelni a járműveiket. A management egyetért a fejlesztőkkel
-///     abban, hogy a kód ebben a formában már nem fejleszthető tovább. Felmerült az igény a tervezési minták használatára. 
+/// 3.: A játék újabb verziója kerül kiadásra. Ebben már a játékosok extrákkal is képesesek felszerelni a 
+/// járműveiket. A management egyetért a fejlesztőkkel abban, hogy a kód ebben a formában már nem fejleszthető 
+/// tovább. Felmerült az igény a tervezési minták használatára. 
 ///     
-///     Első lépésként tanulmányozd a stratégia tervezési mintát (ide jöhet egy link), csak ezután kezdd el a konkrét feladatokat!
+/// Első lépésként tanulmányozd a stratégia tervezési mintát (ide jöhet egy link), csak ezután kezdd el a 
+/// konkrét feladatokat!
 ///     
-///     3/a: Készíts egy VehicleMoovementStrategy interfészt amely egyetlen Move() metódust tartalmaz!
-///     3/b: Készíts négy konkrét osztályt, amely megvalósítja az imént elkészített interfészt (ShipMoovementStrategy, RoverMoovmentStrategy...)!
-///     3/c: A refaktorálás ezen pontján, egyszerűen másold át az egyes konkrét stratégia osztályokba a releváns kódot!
-///     3/d: A Vehicle osztály objektumösszetétel módszerével kapja meg a stratégiát, majd felelősségátadással hívja meg a Move() metódust!
-///     3/e: Teszteld le a működést!
+/// 3/a: Készíts egy VehicleMoovementStrategy interfészt amely egyetlen Move() metódust tartalmaz!
+/// 
+/// 3/b: Készíts négy konkrét osztályt, amely megvalósítja az imént elkészített interfészt (ShipMoovementStrategy,
+/// RoverMoovmentStrategy...)!
+/// 
+/// 3/c: A refaktorálás ezen pontján, egyszerűen másold át az egyes konkrét stratégia osztályokba a releváns kódot!
+/// 
+/// 3/d: A Vehicle osztály objektumösszetétel módszerével kapja meg a stratégiát, majd felelősségátadással hívja 
+/// meg a Move() metódust!
+/// 
+/// 3/e: Teszteld le a működést!
 /// 
 /// </summary>
 namespace RottenVehicle
