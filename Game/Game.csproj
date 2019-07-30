@@ -54,6 +54,10 @@
       <Project>{6ad8d13d-fa22-4ab2-9076-0584bc0dd91f}</Project>
       <Name>PlayerComponent</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RottenVehicle\RottenVehicle.csproj">
+      <Project>{626B0CB0-AF1B-4465-B95D-DB9B64253A49}</Project>
+      <Name>RottenVehicle</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

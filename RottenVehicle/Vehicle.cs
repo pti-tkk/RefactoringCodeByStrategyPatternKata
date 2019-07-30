@@ -43,7 +43,7 @@ namespace RottenVehicle
                         y = 4;
                     else if (direction == "down")
                         y = -7;
-                    if (direction == "left")
+                    else if (direction == "left")
                         x = -5;
                     else if (direction == "right")
                         x = 5;
@@ -61,7 +61,7 @@ namespace RottenVehicle
                         y = 1;
                     else if (direction == "down")
                         y = -2;
-                    if (direction == "left")
+                    else if (direction == "left")
                         x = -2;
                     else if (direction == "right")
                         x = 2;
@@ -88,7 +88,7 @@ namespace RottenVehicle
                 {
                     if (direction == "down")
                         y = -2;
-                    if (direction == "left")
+                    else if (direction == "left")
                         x = -2;
                     else if (direction == "right")
                         x = 2;
@@ -121,7 +121,7 @@ namespace RottenVehicle
                 {
                     if (direction == "up")
                         y = 3;
-                    if (direction == "left")
+                    else if (direction == "left")
                         x = -3;
                     else if (direction == "right")
                         x = 3;
