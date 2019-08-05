@@ -1,6 +1,5 @@
 C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\RottenVehicle\bin\Debug\RottenVehicle.dll
 C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\RottenVehicle\bin\Debug\RottenVehicle.pdb
-C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\RottenVehicle\obj\Debug\RottenVehicle.csprojAssemblyReference.cache
 C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\RottenVehicle\obj\Debug\RottenVehicle.csproj.CoreCompileInputs.cache
 C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\RottenVehicle\obj\Debug\RottenVehicle.dll
 C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\RottenVehicle\obj\Debug\RottenVehicle.pdb

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CleanVehicle
 {
-    public class SubmarineUnderwaterMoovementStrategy : IVehicleEnvironmentMoovmentStrategy
+    public class SubmarineUnderwaterMoovementStrategy: IVehicleEnvironmentMoovmentStrategy
     {
         public Tuple<int, int> Moove(int direction)
         {
