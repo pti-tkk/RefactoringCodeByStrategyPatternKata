@@ -1,24 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CleanVehicle
+﻿namespace CleanVehicle
 {
 
     public class Vehicle
     {
-        private IVehicleEnvironmentMoovmentStrategy moovementStrategy;
-        public IVehicleEnvironmentMoovmentStrategy MoovementStrategy
+        public IVehicleEnvironmentAccelerationStrategy AccelerationStrategy { get; set; }
+        public Speed Speed { get; set; }
+
+        public Vehicle(Speed initialSpeed)
         {
-            get { return moovementStrategy; }
-            set { moovementStrategy = value; }
+            Speed = initialSpeed;
         }
 
-        public Tuple<int, int> Move(int direction)
+        public void Accelerate(int direction)
         {
-            return moovementStrategy.Moove(direction);
+            Speed.Modify(AccelerationStrategy.Accelerate(direction));
         }
+
+        public void Reset()
+        {
+            Speed.Reset();
+        }
+
     }
 }

@@ -41,17 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AirplaneAtmosphereMoovmentStrategy.cs" />
-    <Compile Include="AirplaneSurfaceMoovmentStrategy.cs" />
-    <Compile Include="AirplaneUnderwaterMoovmentStrategy.cs" />
-    <Compile Include="RoverAtmosphereMoovmentStrategy.cs" />
-    <Compile Include="RoverSurfaceMoovmentStrategy.cs" />
-    <Compile Include="RoverUnderwaterMoovmentStrategy.cs" />
-    <Compile Include="SubmarineAtmosphereMoovmentStrategy.cs" />
-    <Compile Include="IVehicleEnvironmentMoovmentStrategy.cs" />
+    <Compile Include="Acceleration.cs" />
+    <Compile Include="AirplaneAtmosphereAccelerationStrategy.cs" />
+    <Compile Include="AVehicleEnvironmentAccelerationStrategy.cs" />
+    <Compile Include="IVehicleEnvironmentAccelerationStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SubmarineUnderwaterMoovmentStrategy - Copy.cs" />
-    <Compile Include="SubmarineSurfaceMoovmentStrategy.cs" />
+    <Compile Include="Speed.cs" />
     <Compile Include="Vehicle.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
