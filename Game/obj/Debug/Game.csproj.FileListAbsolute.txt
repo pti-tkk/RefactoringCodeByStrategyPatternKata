@@ -1,0 +1,10 @@
+C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\Game\bin\Debug\Game.exe.config
+C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\Game\bin\Debug\Game.exe
+C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\Game\bin\Debug\Game.pdb
+C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\Game\bin\Debug\RottenVehicle.dll
+C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\Game\bin\Debug\RottenVehicle.pdb
+C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\Game\obj\Debug\Game.csprojAssemblyReference.cache
+C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\Game\obj\Debug\Game.csproj.CopyComplete
+C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\Game\obj\Debug\Game.exe
+C:\Users\tibor.nagy\source\repos\tkk\RefactoringCodeByStrategyPatternKata\Game\obj\Debug\Game.pdb
