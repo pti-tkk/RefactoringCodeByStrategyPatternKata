@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 namespace RottenVehicle
 {
 
-    public class Vehicle : IVehicle
+    public class Vehicle
     {
-        public ISpeed Speed { get; set; }
+        //public ISpeed Speed { get; set; }
 
-        public void Accelerate(int direction)
-        {
-            throw new NotImplementedException();
-        }
+        //public void Accelerate(int direction)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public string Type { get; set; }
 
@@ -161,6 +161,7 @@ namespace RottenVehicle
 
                 }
             }
+
             //A szárazföldön csak a repülő és a holdjáró képes mozogni.
             //A holdjáró egy dimenzióban (x tengely) mozog, a játék motorja automatikusan igazítja az y értéket a talajszinthez.
             //A repülő két dimenzióban mozog, de az y tengelyen csak fölfelé.
