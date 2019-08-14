@@ -44,6 +44,8 @@
     <Compile Include="Acceleration.cs" />
     <Compile Include="AirplaneAtmosphereAccelerationStrategy.cs" />
     <Compile Include="AVehicleEnvironmentAccelerationStrategy.cs" />
+    <Compile Include="ISpeed.cs" />
+    <Compile Include="IVehicle.cs" />
     <Compile Include="IVehicleEnvironmentAccelerationStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Speed.cs" />

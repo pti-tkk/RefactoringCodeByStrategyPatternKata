@@ -1,12 +1,12 @@
 ﻿namespace CleanVehicle
 {
 
-    public class Vehicle
+    public class Vehicle : IVehicle
     {
         public IVehicleEnvironmentAccelerationStrategy AccelerationStrategy { get; set; }
-        public Speed Speed { get; set; }
+        public ISpeed Speed { get; set; }
 
-        public Vehicle(Speed initialSpeed)
+        public Vehicle(ISpeed initialSpeed)
         {
             Speed = initialSpeed;
         }

@@ -1,10 +1,10 @@
 ﻿namespace CleanVehicle
 {
-    public class Speed
+    public class Speed : ISpeed
     {
         public int X { get; set; }
         public int Y { get; set; }
-        public int Max { get; set; }
+        public int Max { get; private set; }
 
         public Speed(int max = 200, int x = 0, int y = 0)
         {

@@ -13,12 +13,13 @@ namespace Game
 {
     public partial class Form1 : Form
     {
-        private Vehicle vehicle;
+        private IVehicle vehicle;
         private bool up, down, left, right;
         public Form1()
         {
             InitializeComponent();
-            vehicle = new Vehicle(new Speed())
+            ISpeed speed = new Speed();
+            vehicle = new Vehicle(speed)
             {
                 AccelerationStrategy = new AirplaneAtmosphereAccelerationStrategy()
             };
