@@ -39,7 +39,7 @@ Az imént létrehozott interfészt valósítsd meg egy konkrét osztályban! Vá
 - A Vehicle osztályban hozz létre egy settert, amiben a stratégía típusú property-t lehet beállítani! 
 - A Vehicle osztály Accelerate metódus törzsét cseréld le olyan módon, hogy stratégia típusú property saját Accelerate metódusát hívod meg benne az irány átadásával (felelősségátadás)! Az Accelerate metódus formális paraméterlistáját is módosítsd, most már csak az irányra van szükséged!
 
-### Eredméyn kiértékelése
+### Eredmény kiértékelése
 A felsorolt lépések elvégzésével teljesen eltávolítottad az elágazásokat a járműved gyorsulását modellező kódból. Bármennyi új jármű-közeg párost hozzá tudsz adni a stratégia interfész megvalósításával, csak a visszaadott tömb elemeit kell módosítanod. Azt már a kódot felhasználó kliensnek kell eldöntenie, hogy a járműved épp milyen stratégia szerint módosítja a sebességét.
 
 A CleanVehicle projektben a feladat megoldásának egy letisztult változatát találod meg.
