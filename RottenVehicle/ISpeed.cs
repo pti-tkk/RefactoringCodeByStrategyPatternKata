@@ -12,6 +12,5 @@ namespace RottenVehicle
         int Y { get; set; }
 
         void Modify(Acceleration acceleration);
-        void Reset();
     }
 }

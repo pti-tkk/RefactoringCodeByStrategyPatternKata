@@ -18,7 +18,6 @@ namespace RottenVehicle
 
         public string Type { get; set; }
 
-
         public int[] Accelerate(string direction, string environment)
         {
             int[] adjustCoordinates = new int[2];
