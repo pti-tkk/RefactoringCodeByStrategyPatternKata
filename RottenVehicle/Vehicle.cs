@@ -9,13 +9,6 @@ namespace RottenVehicle
 
     public class Vehicle
     {
-        //public ISpeed Speed { get; set; }
-
-        //public void Accelerate(int direction)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
         public string Type { get; set; }
 
         public int[] Accelerate(string direction, string environment)
